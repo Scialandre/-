@@ -1,7 +1,6 @@
 /ignore/
 
-
+/.idea/
 /downloads/
-
+/venv/
 /__pycache__/
-private_var.py

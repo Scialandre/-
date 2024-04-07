@@ -4,12 +4,11 @@ from sys import *
 import os
 import subprocess
 
-from private_var import *
-
 
 mode=argv[2]
 link = argv[1]
 forbiddenChar=('<','>',':','"','/','\\','|','?','*')
+outputFolder='C:\\Users\\Giovanni\\SYTDL\\download\\'
 
 
 try:
