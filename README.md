@@ -31,10 +31,10 @@ py SYTDL2 [link] [argomento]\
 - se cambiate il nome della cartella di installazione sostituite SYTDL2
 con il nuovo nome che gli avete dato
 - se utilizzate link di playlist o radio assicuratevi che il link termini con \
-v=[id del video]\
+v=[id del video]
     - ad esempio il link:\
-https://www.youtube.com/watch?v=kagdsGKHZvU&list=RD8rTbVtrm4G0&index=7\
-deve diventare:\
+https://www.youtube.com/watch?v=kagdsGKHZvU&list=RD8rTbVtrm4G0&index=7
+deve diventare:
 https://www.youtube.com/watch?v=kagdsGKHZvU
     - **Attenzione**: le **&** non fanno parte dell'id video
 
