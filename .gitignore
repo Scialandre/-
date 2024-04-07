@@ -1,4 +1,6 @@
+/ignore/
+
 /.idea/
-/download/
+/downloads/
 /venv/
 /__pycache__/
