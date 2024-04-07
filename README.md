@@ -7,14 +7,14 @@
     - consiglio di copiarla a livello di C:\\Users\\Nome_User per chi\
     non ha familiarità con il terminale e il filesystem
 - Creare una copia di private_var_template.py
-- Rinominarlo private_var.py
-- Modificarlo:
-    - outputFolder-> inserire nella stringa il percorso (assoluto)\
-    in cui verranno salvati i file, assicurandosi che abbia uno dei\
-    seguenti formati:
-        - r'C:\\Users\\Nome_User\\'
-        - 'C:\\\Users\\\\Nome_User\\\\'
-        - 'C:/Users/Nome_User/'
+    - Rinominarlo private_var.py
+    - Modificarlo:
+        - outputFolder-> inserire nella stringa il percorso (assoluto)\
+        in cui verranno salvati i file, assicurandosi che abbia uno dei\
+        seguenti formati:
+            - r'C:\\Users\\Nome_User\\'
+            - 'C:\\\Users\\\\Nome_User\\\\'
+            - 'C:/Users/Nome_User/'
 
 
 # **Utilizzo**
