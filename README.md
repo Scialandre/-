@@ -1,4 +1,8 @@
-# **Impostazioni**
+# **WIP**
+
+Se provate a installare 99% non funzionerà, ci sto lavorando.
+
+## **Installazione**
 - Assicurarsi di aver installato:
     - python
     - pytube
@@ -17,7 +21,7 @@
         - 'C:/Users/Nome_User/'
 
 
-# **Utilizzo**
+## **Utilizzo**
 SYTDL deve essere utilizzato da terminale:
 - aprite cmd
 - utilizzate il comando:\
@@ -35,7 +39,7 @@ https://www.youtube.com/watch?v=kagdsGKHZvU
     - **Attenzione**: le **&** non fanno parte dell'id video
 
 
-# **Argomenti**
+### **Argomenti**
 qualsiasi argomento non listato sotto-printa info sul video 
 
 i-printa il nome
