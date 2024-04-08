@@ -9,7 +9,7 @@ from private_var import *
 
 mode=argv[2]
 link = argv[1]
-forbiddenChar=('<','>',':','"','/','\\','|','?','*')
+forbiddenChar=('<','>',':','"','/','\\','|','?','*','.')
 
 
 try:
@@ -44,8 +44,8 @@ def main():
 
 def vidInfo():
     print(f'Titolo\t\t{yt.title}')
-    if titolo!=yt.title and mode in ('d','pd','ad'):
-        print(f'Nome File\t{titolo}')
+    if titolo!=yt.title:
+        print(f'Nome File\t{titolo}.[extension]')
     print(f'Autore\t\t{yt.author}\t{yt.channel_url}')
     print(f'Durata\t\t{yt.length}')
     print(f'Views\t\t{yt.views}')

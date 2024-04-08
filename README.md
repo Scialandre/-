@@ -42,10 +42,10 @@ https://www.youtube.com/watch?v=kagdsGKHZvU
 ### **Argomenti**
 qualsiasi argomento non listato sotto-printa info sul video 
 
-i-printa il nome
+- i-printa il nome
 
-d-download con qualità massima ma richiede tempo
+- d-download con qualità massima ma richiede tempo (problematico con i titoli dei video)
 
-ad-dowload solo stream audio (formato .mp4)
+- ad-dowload solo stream audio (formato .mp4)
 
-pd-progressive download
+- pd-progressive download (qualità minore ma download veloce)
