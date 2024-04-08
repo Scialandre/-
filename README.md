@@ -5,6 +5,7 @@ Se provate a installare 99% non funzionerà, ci sto lavorando.
 ## **Installazione**
 - Assicurarsi di aver installato:
     - python
+    - ffmpeg
     - pytube
     - moviepy
 - Copiare la Repo github
