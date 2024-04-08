@@ -89,15 +89,11 @@ def audioDowload():
     try:
         yd=yt.streams.get_by_itag(139)
         yd.download(output_path=outputFolder,filename=f'{titolo}.mp4')
-        #print('')
+        
 
-        #video_file,ext = os.path.splitext(f'{outputFolder}\\{titolo}.mp4')
-        #print(video_file,'cccc',ext)
-
-
-        #subprocess.call(["ffmpeg","-y","-i",video_file,f"{video_file}.mp3"],
-                        #stdout=subprocess.DEVNULL,
-                        #stderr=subprocess.STDOUT)
+        cmd = f'{ffmpegDir}ffmpeg.exe -y -i \"{outputFolder}{titolo}.mp4\" \"{outputFolder}{titolo}.mp3\"'
+        #subprocess.call(cmd,shell=True)
+        os.system(cmd)
 
         print('audio download completo')
     except:
