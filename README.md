@@ -46,6 +46,6 @@ qualsiasi argomento non listato sotto-printa info sul video
 
 - d-download con qualità massima ma richiede tempo (problematico con i titoli dei video)
 
-- ad-dowload solo stream audio (formato .mp4)
+- ad-dowload solo stream audio (formato .mp3)
 
 - pd-progressive download (qualità minore ma download veloce)
