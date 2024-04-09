@@ -3,13 +3,18 @@ from moviepy.editor import VideoFileClip,AudioFileClip
 from sys import *
 import os
 import subprocess
+import tkinter as tk
 
 from private_var import *
+from gui import sytdlGui
+
+sytdlGui()
 
 
 mode=argv[2]
 link = argv[1]
 forbiddenChar=('<','>',':','"','/','\\','|','?','*','.')
+
 
 
 try:
