@@ -1,4 +1,5 @@
-from pytube import YouTube
+import pytube
+from pytube import YouTube, Caption
 from moviepy.editor import VideoFileClip,AudioFileClip
 from sys import *
 import os
@@ -8,7 +9,7 @@ import tkinter as tk
 from private_var import *
 from gui import sytdlGui
 
-sytdlGui()
+#sytdlGui()
 
 
 mode=argv[2]
@@ -23,9 +24,12 @@ try:
     for character in forbiddenChar:
         titolo = titolo.replace(character,'')
 
+
 except:
     if mode!='i':
         print('errore di apertura link')
+
+
 
 def main():
 
@@ -48,6 +52,7 @@ def main():
 
 
 def vidInfo():
+    global yt, titolo
     print(f'Titolo\t\t{yt.title}')
     if titolo!=yt.title:
         print(f'Nome File\t{titolo}.[extension]')
