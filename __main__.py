@@ -14,6 +14,7 @@ forbiddenChar=('<','>',':','"','/','\\','|','?','*','.')
 
 try:
     yt = YouTube(link)
+    yt.bypass_age_gate()
     titolo = yt.title  #trovare il modo di strippare caratteri strani
     for character in forbiddenChar:
         titolo = titolo.replace(character,'')
