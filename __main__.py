@@ -12,41 +12,29 @@ from gui import sytdlGui
 #sytdlGui()
 
 
-mode=argv[2]
-link = argv[1]
+#mode=argv[2]
+#link = argv[1]
 forbiddenChar=('<','>',':','"','/','\\','|','?','*','.')
 
 
 
-try:
-    yt = YouTube(link)
-    titolo = yt.title  #trovare il modo di strippare caratteri strani
-    for character in forbiddenChar:
-        titolo = titolo.replace(character,'')
+#try:
+    #yt = YouTube(link)
+    #titolo = yt.title  #trovare il modo di strippare caratteri strani
+    #for character in forbiddenChar:
+        #titolo = titolo.replace(character,'')
 
 
-except:
-    if mode!='i':
-        print('errore di apertura link')
+#except:
+    #if mode!='i':
+        #print('errore di apertura link')
 
 
 
 def main():
 
-    if mode!='i':
-        vidInfo()
-    else:
-        print('SYTDL - Scialandre YouTube DownLoader')
-
-
-
-
-    if mode == 'd':
-        stitchDownload()
-    if mode == 'pd':
-        progressiveDowload()
-    if mode == 'ad':
-        audioDowload()
+    pass
+    sytdlGui() 
 
 
 
