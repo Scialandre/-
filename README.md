@@ -5,6 +5,7 @@ Se provate a installare 99% non funzionerà, ci sto lavorando.
 ## **Installazione**
 - Assicurarsi di aver installato:
     - python
+    - ffmpeg
     - pytube
     - moviepy
 - Copiare la Repo github
@@ -26,7 +27,7 @@ SYTDL deve essere utilizzato da terminale:
 - aprite cmd
 - utilizzate il comando:\
 \
-py SYTDL2 [link] [argomento]
+py SYTDL [link] [argomento]
 
 - se cambiate il nome della cartella di installazione sostituite SYTDL2
 con il nuovo nome che gli avete dato
