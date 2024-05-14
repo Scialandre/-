@@ -79,40 +79,40 @@ def vidInfo():
 def stitchDownload():
     try:
         #ydv= yt.streams.filter(progressive=False,file_extension='mp4').order_by("resolution").last()
-        ydv = yt.streams.get_by_itag(137)
-        yda = yt.streams.get_by_itag(140)
+        ydv = yt.streams.filter(file_extension='mp4',progressive=False).get_highest_resolution()
+        yda = yt.streams.get_audio_only()
 
         ydv.download(output_path=outputFolder,filename_prefix='video-',filename=f'{titolo}.mp4')
         yda.download(output_path=outputFolder,filename_prefix='audio-',filename=f'{titolo}.mp4')
-        print(f'dowloaded stream video:{ydv}')
-        print(f'dowloaded stream audio:{yda}')
+        logging.info(f'dowloaded stream video:{ydv}')
+        logging.info(f'dowloaded stream audio:{yda}')
 
 
     except:
-        print('errore di download')
+        logging.error('errore di download')
 
     try:
         finalVideo = VideoFileClip(f'{outputFolder}video-{titolo}.mp4')
         audioclip = AudioFileClip(f'{outputFolder}audio-{titolo}.mp4')
         finalVideo = finalVideo.set_audio(audioclip)
         finalVideo.write_videofile(f'{outputFolder}{titolo}.mp4')
-        print('file scaricato correttamente')
+        logging.info('file scaricato correttamente')
     except:
-        print('errore di editing')
+        logging.error('errore di editing')
 
 def progressiveDowload():
 
     try:
-        yd=yt.streams.filter(file_extension='mp4').get_highest_resolution()
+        yd=yt.streams.filter(file_extension='mp4',progressive=True).get_highest_resolution()
         yd.download(output_path=outputFolder,filename=f'{titolo}.mp4')
-        print('progressive download completo')
+        logger.info('progressive download completo')
     except:
-        print('errore di download')
+        logger.error('errore di download')
 
 def audioDowload():
 
     try:
-        yd=yt.streams.get_by_itag(139)
+        yd= yt.streams.get_audio_only()
         yd.download(output_path=outputFolder,filename=f'{titolo}.mp4')
         
 
@@ -120,9 +120,9 @@ def audioDowload():
         #subprocess.call(cmd,shell=True)
         os.system(cmd)
 
-        print('audio download completo')
+        logger.info('audio download completo')
     except:
-        print('errore di download')
+        logger.error('errore di download')
 
 def helpMessage():
     print('Argomenti/Modalità:')
