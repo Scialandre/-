@@ -24,12 +24,12 @@ Se provate a installare 99% non funzionerà, ci sto lavorando.
 
 ## **Utilizzo**
 SYTDL deve essere utilizzato da terminale:
-- aprite cmd
+- aprite il menù start e cercate cmd e premete invio
 - utilizzate il comando:\
 \
 py SYTDL [link] [argomento]
 
-- se cambiate il nome della cartella di installazione sostituite SYTDL2
+- se cambiate il nome della cartella di installazione sostituite SYTDL
 con il nuovo nome che gli avete dato
 - se utilizzate link di playlist o radio assicuratevi che il link termini con \
 v=[id del video]
@@ -40,8 +40,7 @@ https://www.youtube.com/watch?v=kagdsGKHZvU
     - **Attenzione**: le **&** non fanno parte dell'id video
 
 
-### **Argomenti**
-qualsiasi argomento non listato sotto-printa info sul video 
+### **Argomenti** 
 
 - i-printa info sul video
 
