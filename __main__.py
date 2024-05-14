@@ -2,48 +2,72 @@ from pytube import YouTube
 from moviepy.editor import VideoFileClip,AudioFileClip
 from sys import *
 import os
-import subprocess
 
+from SYTLDlogger import *
 from private_var import *
 
+global link
+global mode
 
-mode=argv[2]
-link = argv[1]
 forbiddenChar=('<','>',':','"','/','\\','|','?','*','.')
+titolo=''
+yt = ''
 
 
-try:
-    yt = YouTube(link)
-    yt.bypass_age_gate()
-    titolo = yt.title  #trovare il modo di strippare caratteri strani
-    for character in forbiddenChar:
-        titolo = titolo.replace(character,'')
-
-except:
-    if mode!='i':
-        print('errore di apertura link')
 
 def main():
 
-    if mode!='i':
-        vidInfo()
+    print('SYTDL - Scialandre YouTube DownLoader')
+    setup()
+    
+    
+    if mode == 'h':
+        helpMessage()
     else:
-        print('SYTDL - Scialandre YouTube DownLoader')
+        vidInfo()
+        modeDispatch()
+    
 
+def setup():
+    global yt, mode, link, titolo
 
+    try:
+        mode = argv[2]
+        link = argv[1]
+    except:
+        logger.error('Argomenti insufficienti')
 
+    try:
+        yt = YouTube(link)
+        titolo= yt.title
+        try:
+            for character in forbiddenChar:
+                titolo = titolo.replace(character,'')
+        except:
+            logger.error('Errore strip titolo')
+    except:
+        logger.error('Errore apertura link')
 
+    try:
+        yt.bypass_age_gate()
+    except:
+        logger.error('Errore bypass_age_gate()')
+
+def modeDispatch():
     if mode == 'd':
         stitchDownload()
-    if mode == 'pd':
+    elif mode == 'pd':
         progressiveDowload()
-    if mode == 'ad':
+    elif mode == 'ad':
         audioDowload()
-
-
-
+    elif mode == 'i':
+        pass
+    else:
+        logger.error('Modalità inesistente')
 
 def vidInfo():
+    global titolo
+
     print(f'Titolo\t\t{yt.title}')
     if titolo!=yt.title:
         print(f'Nome File\t{titolo}.[extension]')
@@ -100,6 +124,13 @@ def audioDowload():
     except:
         print('errore di download')
 
+def helpMessage():
+    print('Argomenti/Modalità:')
+    print('d-\tStitch Download, lento ma qualità migliore (lascia file residui)')
+    print('pd-\tProgressive Download, veloce ma qualità inferiore')
+    print('ad-\tAudio Download, solo audio (crea file mp3 ed mp4)')
+    print('i-\tMostra info video')
+    print('h-\tMostra questo messaggio')
 
 if __name__ == "__main__":
     main()
